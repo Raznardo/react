@@ -17,7 +17,7 @@ const Header = () => (
 
 const PlayerFooter = () => (
   <footer className="player-footer">
-    <audio controls src="https://your-azuracast-url.com/radio/8000/radio.mp3" className="audio-player"></audio>
+    <audio controls src="https://demo.azuracast.com/listen/azuratest_radio/radio.mp3" className="audio-player"></audio>
   </footer>
 );
 
@@ -25,7 +25,7 @@ const Accueil = () => {
   const [recentTracks, setRecentTracks] = useState([]);
 
   useEffect(() => {
-    fetch("https://your-azuracast-url.com/api/nowplaying/your-station")
+    fetch("https://demo.azuracast.com/api/nowplaying/azuratest_radio")
       .then(res => res.json())
       .then(data => {
         if (data && data.recent_tracks) {
